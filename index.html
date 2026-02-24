@@ -17,6 +17,27 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         h1, h2, .serif { font-family: 'Playfair Display', serif; }
+        /* Perbaikan Background agar Full di Laptop & HP */
+.hero-section { 
+    background-image: url('hero-image.jpeg'); /* Pastikan link gambar benar */
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ini kunci agar gambar setinggi layar laptop */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid red !important;
+}
+
+/* Tambahan agar teks di atas gambar terbaca jelas */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Memberi lapisan gelap tipis */
+}
     </style>
 </head>
 <body class="bg-[#faf9f6] text-[#2c2c2c]">
